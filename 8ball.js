@@ -3,7 +3,7 @@ function shakeMagic8Ball(){
 
     if(question === null){
         document.getElementById('response-text').innerText = 'Please ask a question!'
-        document.getElementById('response-text').classList = 'lead text-warning'
+        document.getElementById('response-text').classList = 'lead text-dark'
         document.getElementById('response-img').src = '8ball.png'
     }
 

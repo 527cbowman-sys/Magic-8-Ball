@@ -18,17 +18,20 @@
         />
 
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://use.typekit.net/odu7pun.css">
     </head>
 
     <body class="d-flex flex-column min-vh-100">
         <header>
         </header>
         <main class="container text-center my-auto">
-            <h1>Magic 8 Ball</h1>
+            <h1 class="title">Magic 8 Ball</h1>
             <p id="response-text">Ask A Question</p>
             <img src="8ball.png" alt="" id="response-img" class="img img-fluid">
-            <button onclick="shakeMagic8Ball()" class="btn btn-primary">Shake the Magic 8 Ball</button>
         </main>
+        <div class="container justify-content-center">
+            <button onclick="shakeMagic8Ball()" class="btn">Shake the Magic 8 Ball</button>
+        </div>
         <footer class="container text-center my-auto">
             <p>&copy;2025 Claudia Bowman</p>
         </footer>

@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(112, 111, 111);
+    background: radial-gradient(circle, rgb(207, 206, 206), rgb(145, 144, 144), rgb(75, 49, 90), rgb(36, 10, 48));
 }
 
 .title {
@@ -10,20 +10,31 @@ body {
     margin-top: 4%;
     color: #000000;
     text-shadow: 0 0 30px #ddd3f5;
-
+    transition: all 0.6s ease 0s;
+}
+.title:hover {
+    text-shadow: 0 0 45px #eae8f0;
+    transition: all 0.6s ease 0s;
 }
 
 .btn {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    background-color: #ddd3f5;
+    background-color: #cdbae5;
     transition: all 1s ease 0s;
+    border-radius: 25px;
+    padding: 2%;
+    filter: drop-shadow(0 0 0.75rem #cdbae5);
+    margin-bottom: 8%;
+    font-family: "national-park", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .btn:hover {
     animation: bounce 1s;
-    background-color: #ddd3f5;
-    filter: drop-shadow(0 0 0.75rem #ddd3f5);
+    background-color: #cdbae5;
+    filter: drop-shadow(0 0 2rem #cdbae5);
     transition: all 1s ease 0s;
 }
 
@@ -34,6 +45,14 @@ body {
 .img:hover {
     transition: all 1s ease 0s;
     animation: rotation 1.5s;
+    filter: drop-shadow(0 0 5rem #e5dff3);
+}
+
+footer {
+  font-family: "national-park", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(201, 198, 198);
 }
 
 
@@ -57,4 +76,15 @@ body {
   to {
     transform: rotate(359deg);
   }
+}
+
+/* Added spin animation for programmatic use */
+.spin {
+    animation: spin 900ms ease-in-out;
+    /* keep existing transform/shadow behavior while spinning */
+    filter: drop-shadow(0 0 5rem #e5dff3);
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
 }

@@ -26,18 +26,34 @@
         </header>
         <main class="container text-center my-auto">
             <h1 class="title">Magic 8 Ball</h1>
-            <p id="response-text">Ask A Question</p>
+                <p id="response-text" class="lead text-white">Ask A Question</p>
             <img src="8ball.png" alt="" id="response-img" class="img img-fluid">
         </main>
+        <!-- Question Modal (replaces native prompt) -->
+        <div class="modal fade" id="questionModal" tabindex="-1" aria-labelledby="questionModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content custom-modal">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="questionModalLabel">Ask the Magic 8 Ball</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input id="questionInput" class="form-control form-control-lg" placeholder="Type your question..." />
+                    </div>
+                    <div class="modal-footer border-0">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" id="questionSubmit" class="btn btn-primary">Ask</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container justify-content-center">
             <button onclick="shakeMagic8Ball()" class="btn">Shake the Magic 8 Ball</button>
         </div>
-        <footer class="container text-center my-auto">
+        <footer class="container text-center my-auto copyright">
             <p>&copy;2025 Claudia Bowman</p>
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
-
-        <script src="8ball.js"></script>
 
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -50,5 +66,7 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
+        <script src="8ball.js"></script>
     </body>
 </html>
